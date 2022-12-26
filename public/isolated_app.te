@@ -7,3 +7,5 @@
 ###
 
 type isolated_app, domain;
+
+allow isolated_app app_data_file:file { append read write getattr lock map setattr };
