@@ -64,5 +64,8 @@ get_prop(gpuservice, bpf_progs_loaded_prop)
 
 add_service(gpuservice, gpu_service)
 
+# Needed for querying permission
+allow gpuservice permission_service:service_manager find;
+
 # Only uncomment below line when in development
 # userdebug_or_eng(`permissive gpuservice;')
