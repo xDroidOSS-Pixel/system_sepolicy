@@ -5,3 +5,12 @@ init_daemon_domain(servicemanager)
 read_runtime_log_tags(servicemanager)
 
 set_prop(servicemanager, ctl_interface_start_prop)
+
+allow servicemanager flipendo:binder { call transfer };
+allow servicemanager flipendo:dir { search };
+allow servicemanager flipendo:file { read open };
+allow servicemanager flipendo:process { getattr };
+allow servicemanager untrusted_app:binder { call transfer };
+allow servicemanager untrusted_app:dir { search };
+allow servicemanager untrusted_app:file { read open };
+allow servicemanager untrusted_app:process { getattr };
