@@ -41,3 +41,6 @@ allow untrusted_app app_api_service:service_manager find;
 allow untrusted_app color_display_service:service_manager find;
 
 dontaudit untrusted_app vendor_hwservice_type:hwservice_manager find;
+allow untrusted_app media_rw_data_file:file relabelfrom;
+allow untrusted_app incremental_prop:file read;
+allow untrusted_app proc_zoneinfo:file read;

@@ -55,6 +55,10 @@ allow platform_app color_display_service:service_manager find;
 
 dontaudit platform_app vendor_hwservice_type:hwservice_manager find;
 
+# audit2allow
+allow platform_app config_gz:file open;
+allow platform_app system_data_file:file { watch watch_reads };
+
 # Direct access to vold-mounted storage under /mnt/media_rw
 # This is a performance optimization that allows platform apps to bypass the FUSE layer
 allow platform_app mnt_media_rw_file:dir r_dir_perms;
