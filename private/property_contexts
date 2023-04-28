@@ -1370,3 +1370,6 @@ virtualizationservice.state.last_cid u:object_r:virtualizationservice_prop:s0 ex
 
 # Adaptive haptics settings property
 vibrator.adaptive_haptics.enabled u:object_r:adaptive_haptics_prop:s0 exact string
+
+# kernel prop denials
+ro.kernel.watermark_scale_factor u:object_r:watermark_kernel_prop:s0 exact int

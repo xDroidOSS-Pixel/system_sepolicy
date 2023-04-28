@@ -82,4 +82,5 @@
     vendor_vm_file
     virtual_device_service
     wallpaper_effects_generation_service
+    watermark_kernel_prop
 ))

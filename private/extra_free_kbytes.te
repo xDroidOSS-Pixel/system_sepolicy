@@ -5,3 +5,4 @@ init_daemon_domain(extra_free_kbytes)
 #============= extra_free_kbytes ==============
 allow extra_free_kbytes property_socket:sock_file write;
 allow extra_free_kbytes init:unix_stream_socket connectto;
+set_prop(extra_free_kbytes, watermark_kernel_prop)
