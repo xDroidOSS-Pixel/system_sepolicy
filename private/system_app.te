@@ -41,6 +41,9 @@ allow system_app icon_file:file r_file_perms;
 allow system_app sysfs_zram:dir r_dir_perms;
 allow system_app sysfs_zram:file r_file_perms;
 
+# Allow bypassing the FUSE layer
+r_dir_file(system_app, mnt_pass_through_file)
+
 # allow apps like settings to check the file signature of an apk installed on
 # the Incremental File System, fill missing blocks and get the app status and loading progress
 allowxperm system_app apk_data_file:file ioctl {
